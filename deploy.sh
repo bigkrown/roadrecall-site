@@ -11,4 +11,4 @@ fi
 git push
 
 npx -y @railway/cli@latest up --service roadrecall-site --detach
-echo "Live at https://roadrecall-site-production.up.railway.app"
+echo "Live at https://roadrecall.up.railway.app"

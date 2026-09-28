@@ -3,7 +3,7 @@
 The privacy policy, data-deletion instructions and a short landing page for
 the [RoadRecall](https://play.google.com/store) app. Static HTML, no build.
 
-- **Live:** https://roadrecall-site-production.up.railway.app — Railway, which
+- **Live:** https://roadrecall.up.railway.app — Railway, which
   is the address the app and both store listings point at.
 - **Mirror:** https://bigkrown.github.io/roadrecall-site/ — GitHub Pages,
   updated by pushing to `main`.
