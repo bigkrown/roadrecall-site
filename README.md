@@ -1,0 +1,34 @@
+# RoadRecall site
+
+The privacy policy, data-deletion instructions and a short landing page for
+the [RoadRecall](https://play.google.com/store) app. Static HTML, no build.
+
+- **Live:** https://roadrecall-site-production.up.railway.app — Railway, which
+  is the address the app and both store listings point at.
+- **Mirror:** https://bigkrown.github.io/roadrecall-site/ — GitHub Pages,
+  updated by pushing to `main`.
+
+| Page | Used for |
+| --- | --- |
+| `privacy.html` | The privacy policy URL in Google Play and App Store Connect |
+| `delete-data.html` | Play's account and data deletion URL |
+| `index.html` | A landing page linking the two |
+
+## Updating the policy
+
+The policy lives in the app repo, in `lib/screens/privacy_screen.dart`, and
+`docs/privacy-policy.html` there is the same text as a page. Copy that file's
+body into `privacy.html` here (the only differences are the shared stylesheet,
+the nav link and the footer), then:
+
+```sh
+./deploy.sh        # pushes to GitHub and redeploys to Railway
+```
+
+Keep the three copies — the app, `docs/privacy-policy.html` and this one — in
+step, and move the "Last updated" date when the text changes.
+
+## Hosting
+
+`Dockerfile` serves the folder with Caddy on `$PORT`. Railway builds it on
+every `railway up`.
