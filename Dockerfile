@@ -3,6 +3,7 @@ FROM caddy:2-alpine
 
 COPY *.html /site/
 COPY *.css /site/
+COPY *.txt /site/
 
 # Railway hands the port in as $PORT, and Caddy's own health is enough.
 ENV PORT=8080
