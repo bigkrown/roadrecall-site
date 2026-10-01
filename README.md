@@ -36,3 +36,7 @@ step, and move the "Last updated" date when the text changes.
 Firebase Hosting serves the folder as it is (`firebase.json`), skipping the
 repo's own files. `Dockerfile` is left from the earlier Railway hosting and
 isn't used.
+
+The old Railway service (`roadrecall-site`, roadrecall.up.railway.app) was
+taken offline on 1 October 2026 with `railway down`. The service still
+exists, so `railway up --service roadrecall-site` would bring it back.
