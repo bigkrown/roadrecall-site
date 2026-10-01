@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Pushes the site to GitHub (which updates the Pages mirror) and redeploys
-# the Railway service that the app and the stores point at.
+# Pushes the site to GitHub (which updates the Pages mirror) and deploys it
+# to Firebase Hosting, the address the app and the stores point at.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -10,5 +10,5 @@ if [[ -n "$(git status --porcelain)" ]]; then
 fi
 git push
 
-npx -y @railway/cli@latest up --service roadrecall-site --detach
-echo "Live at https://roadrecall.up.railway.app"
+firebase deploy --only hosting --project roadrecall-app --non-interactive
+echo "Live at https://roadrecall-app.web.app"

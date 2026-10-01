@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "Dockerfile",
+      "deploy.sh",
+      "README.md",
+      "**/.*"
+    ],
+    "cleanUrls": false,
+    "headers": [
+      {
+        "source": "/app-ads.txt",
+        "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+      }
+    ]
+  }
+}

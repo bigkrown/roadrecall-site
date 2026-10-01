@@ -3,8 +3,9 @@
 The privacy policy, data-deletion instructions and a short landing page for
 the [RoadRecall](https://play.google.com/store) app. Static HTML, no build.
 
-- **Live:** https://roadrecall.up.railway.app — Railway, which
-  is the address the app and both store listings point at.
+- **Live:** https://roadrecall-app.web.app — Firebase Hosting in the
+  `roadrecall-app` project, which is the address the app and both store
+  listings point at.
 - **Mirror:** https://bigkrown.github.io/roadrecall-site/ — GitHub Pages,
   updated by pushing to `main`.
 
@@ -24,7 +25,7 @@ body into `privacy.html` here (the only differences are the shared stylesheet,
 the nav link and the footer), then:
 
 ```sh
-./deploy.sh        # pushes to GitHub and redeploys to Railway
+./deploy.sh        # pushes to GitHub and deploys to Firebase Hosting
 ```
 
 Keep the three copies — the app, `docs/privacy-policy.html` and this one — in
@@ -32,5 +33,6 @@ step, and move the "Last updated" date when the text changes.
 
 ## Hosting
 
-`Dockerfile` serves the folder with Caddy on `$PORT`. Railway builds it on
-every `railway up`.
+Firebase Hosting serves the folder as it is (`firebase.json`), skipping the
+repo's own files. `Dockerfile` is left from the earlier Railway hosting and
+isn't used.
